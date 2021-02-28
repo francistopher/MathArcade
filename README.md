@@ -1,3 +1,3 @@
-# MathArcade
+# Math Arcade
 
-*College Club Project
+A project for the PBSC Math Club
