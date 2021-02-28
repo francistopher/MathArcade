@@ -1,0 +1,77 @@
+#header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 3vh;
+    margin: 0; 
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-family: "Comic Sans MS", "Comic Sans", cursive; 
+}
+
+#target {
+    position: absolute;
+}
+
+#link {
+    position: absolute;
+}
+
+#bowAndArrow {
+    position: absolute;
+}
+
+#arrow {
+    position: absolute;
+}
+
+#startB {
+    position: absolute;
+    background-color: orange;
+    border: none;
+    font-size: 5vh;
+    font-family: Comic Sans MS
+    overflow: hidden;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);   
+}
+
+.option {
+    background-color: White;
+    z-index: 120;
+    border: none;
+    font-family: "Comic Sans MS", "Comic Sans", cursive; 
+}
+
+.option:hover {
+    background-color: lightgreen;
+}
+
+#question {
+    position: absolute;
+    left: 25vw;
+    top: 7vh;
+    width: 50vw;
+    height: 2vh;
+    text-align: center;
+    background-color: black;
+    font-size: i3vh;
+    color: white;
+    padding: 2vh;
+    opacity: 0;
+}
+
+#answerBox {
+    position: absolute;
+    left: 45vw;
+    top: 85vh;
+    width: 10vw;
+    height: 5vh;
+    border-color: black;
+    border-width: 1vh;
+    font-size: 3vh;
+    text-align: center;
+    display: none;
+}
+
+
