@@ -11,3 +11,11 @@
     font-family: "Comic Sans MS", "Comic Sans", cursive; 
 }
 
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+input {
+    position: absolute;
+}
