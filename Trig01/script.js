@@ -62,11 +62,21 @@ function draw() {
     const ctf = document.getElementById('c')
 
     function setSize(element) {
-        atf.style.width = ""
+        element.style.width = screenHeight * 0.2 + 'px'
+        element.style.height = screenHeight * 0.05  + 'px'
     }
 
+    function setPosition(element, x, y) {
+        element.style.left = x + 'px'
+        element.style.top = y + 'px' 
+    }
+    setSize(atf)
+    setSize(btf)
+    setSize(ctf)
 
+    setPosition(atf, (screenWidth - (screenHeight * 0.2)) * 0.5, screenHeight * 2 / 2.75)
+    setPosition(btf, lineX + (aLength * 1.125), (screenHeight * 2 / 3) - (bLength * 0.6))
 
-
+    
 }
 draw();
