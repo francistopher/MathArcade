@@ -74,4 +74,14 @@
     display: none;
 }
 
+#ins {
+    position: absolute;
+    top: 80vh;
+    height: 5vh;
+    font-size: 3vh;
 
+}
+
+body {
+    overflow: hidden;
+}

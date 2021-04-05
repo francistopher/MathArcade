@@ -22,7 +22,7 @@ function getRadiansWithPi(radian) {
     const index = radian.indexOf("pi")
     var newRadian = radian
     if (index != -1) {
-      newRadian = radian.substring(0, index) + "π" + radian.substring(index + 2)
+        newRadian = radian.substring(0, index) + "\u03C0" + radian.substring(index + 2)
     }
     return newRadian
 }
@@ -32,7 +32,7 @@ function generateProblemSet(option) {
     for (var index = 0; index < indexes.length; index++) {
         switch (option) {
             case 0:
-                questions.push("What is the radians of " + degrees[indexes[index]] + "º?")
+                questions.push("What is the radians of " + degrees[indexes[index]] + "\u00B0?")
                 answers.push(radians[indexes[index]])
                 break
             case 1:
@@ -40,20 +40,20 @@ function generateProblemSet(option) {
                 answers.push(degrees[indexes[index]])
                 break
             case 2:
-                questions.push("What is the X value of " + degrees[indexes[index]] + "º?")
+                questions.push("What is the cos of " + degrees[indexes[index]] + "\u00B0?")
                 answers.push(getXOfDegree(degrees[indexes[index]]))
                 break
             case 3:
-                questions.push("What is the Y value of " + degrees[indexes[index]] + "º?")
+                questions.push("What is the sin of " + degrees[indexes[index]] + "\u00B0?")
                 answers.push(getYOfDegree(degrees[indexes[index]]))
                 break
             case 4:
-                questions.push("What is the X value of " + getRadiansWithPi(radians[indexes[index]]) + " radians?")
+                questions.push("What is the cos value of " + getRadiansWithPi(radians[indexes[index]]) + " radians?")
                 console.log(getXOfRadian(radians[indexes[index]]), "HELLO")
                 answers.push(getXOfRadian(radians[indexes[index]]))
                 break
             case 5:
-                questions.push("What is the Y value of " + getRadiansWithPi(radians[indexes[index]]) + " radians?")
+                questions.push("What is the sin value of " + getRadiansWithPi(radians[indexes[index]]) + " radians?")
                 answers.push(getYOfRadian(radians[indexes[index]]))  
                 break
         }
