@@ -1,12 +1,14 @@
+
+const screenHeight = screen.height - (window.outerHeight - window.innerHeight)
+const screenWidth = screen.width
+const question = document.getElementById('question')
 var a = 1
 var b = 1
 var c = 1
-const screenHeight = screen.height - (window.outerHeight - window.innerHeight)
-const screenWidth = screen.width
+var temp = 0
 function generateSides() {
     a = Math.floor(Math.random() * 9) + 2
     b = Math.floor(Math.random() * 9) + 2
-    var temp = 0;
     if (b > a) {
         temp = b
         b = a
@@ -90,5 +92,74 @@ function draw() {
     btf.value = b
     ctf.value = c
 
+    const side = Math.floor(Math.random() * 3)
+    if (side == 0) {
+        question.innerHTML = "What is the length of the hypotenuse side?"
+        ctf.value = "???"
+        atf.disabled = true
+        btf.disabled = true
+        ctf.disabled = false
+    }
+    else if (side == 1) {
+        question.innerHTML = "What is the length of the adjacent side?"
+        atf.value = "???"
+        ctf.disabled = true
+        btf.disabled = true
+        atf.disabled = false
+    }
+    else {
+        question.innerHTML = "What is the length of the opposite side?"
+        btf.value = "???"
+        btf.disabled = false
+        atf.disabled = true
+        ctf.disabled = true
+    }
+
 }
+
+atf.addEventListener("keyup", function(event) {
+    event.preventDefault()
+    if (event.keyCode == 13) {
+
+            if(a == atf.value) {
+                question.innerHTML = "Correct! :)"   
+            } else {
+            
+                question.innerHTML = "Try Again! :("   
+            }
+    }})
+
+btf.addEventListener("keyup", function(event) {
+    event.preventDefault()
+    if (event.keyCode == 13) {
+    
+            if(b == btf.value) {
+                question.innerHTML = "Correct! :)"   
+            } else {
+            
+                question.innerHTML = "Try Again! :("   
+            }
+    }})
+
+ctf.addEventListener("keyup", function(event) {
+    event.preventDefault()
+    if (event.keyCode == 13) {
+        if (c[0] == "\u221A") {
+            if(("r" + c.slice(1)) == ctf.value) {
+                question.innerHTML = "Correct! :)"   
+            } else {
+                
+                question.innerHTML = "Try Again! :("   
+            }
+        } else {
+            if(c == ctf.value) {
+                question.innerHTML = "Correct! :)"   
+            } else {
+            
+                question.innerHTML = "Try Again! :("   
+            }
+        }
+    }})
+
 draw();
+

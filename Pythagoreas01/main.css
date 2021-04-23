@@ -21,3 +21,24 @@ input {
     text-align: center;
     font-size: 3vh;
 }
+
+#question {
+    position: absolute;
+    height: 5vh;
+    left: 25vw;
+    width: 50vw;
+    text-align: center;
+    top: 5vh;
+    font-size: 3vh;
+    padding-top: 1.5vh;
+}
+
+
+#ins {
+    position: absolute;
+    left: 1vh;
+    top: 80vh;
+    height: 5vh;
+    font-size: 3vh;
+
+}
